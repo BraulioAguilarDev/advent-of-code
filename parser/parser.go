@@ -1,4 +1,4 @@
-package main
+package parser
 
 import (
 	"bufio"
@@ -6,8 +6,8 @@ import (
 	"strconv"
 )
 
-// parserFileToSlice parse file to slice
-func parserFileToSlice(path string) ([]int, error) {
+// FileToSlice parses file to slice
+func FileToSlice(path string) ([]int, error) {
 
 	var rows []int
 

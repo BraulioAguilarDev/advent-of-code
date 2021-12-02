@@ -1,12 +1,13 @@
 package main
 
 import (
+	"advent-of-code/parser"
 	"fmt"
 )
 
 func main() {
 	// Get data from file & parse it
-	rows, err := parserFileToSlice("data/input.txt")
+	rows, err := parser.FileToSlice("input.txt")
 	if err != nil {
 		fmt.Println("Error:", err.Error())
 	}
@@ -16,6 +17,8 @@ func main() {
 
 	// Display result
 	fmt.Println("Result:", count)
+
+	fmt.Println(count)
 }
 
 // measurement returns int
