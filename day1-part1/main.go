@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// Get data from file & parse it
-	rows, err := parser.FileToSlice("input.txt")
+	rows, err := parser.GetInts("input.txt")
 	if err != nil {
 		fmt.Println("Error:", err.Error())
 	}

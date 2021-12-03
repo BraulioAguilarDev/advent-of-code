@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMeasurement(t *testing.T) {
+func TestMeasurementOk(t *testing.T) {
 
 	expected := 7
 
