@@ -14,13 +14,16 @@ func main() {
 		fmt.Println(err)
 	}
 
-	h, v := Dive(rows)
+	result := aim(rows)
 
-	fmt.Println("Result: ", h*v)
+	fmt.Println("Result: ", result)
 }
 
-// Dive funcs calculates the horizontal and vertical (depth) position
-func Dive(rows []string) (h, v int) {
+func aim(rows []string) int {
+	aim := 0
+	total := 0
+	h := 0
+
 	for i := 0; i < len(rows); i++ {
 		commands := strings.Split(rows[i], " ")
 		number, _ := strconv.Atoi(commands[1])
@@ -28,12 +31,15 @@ func Dive(rows []string) (h, v int) {
 		switch commands[0] {
 		case "forward":
 			h = h + number
+			total = total + (aim * number)
 		case "down":
-			v = v + number
+			// v = v + number
+			aim = aim + number
 		case "up":
-			v = v - number
+			// v = v - number
+			aim = aim - number
 		}
 	}
 
-	return h, v
+	return h * total
 }
