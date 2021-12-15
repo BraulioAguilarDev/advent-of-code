@@ -14,12 +14,13 @@ func main() {
 		fmt.Println(err)
 	}
 
-	result := aim(rows)
+	result := Dive(rows)
 
 	fmt.Println("Result: ", result)
 }
 
-func aim(rows []string) int {
+// Dive function returns an int
+func Dive(rows []string) int {
 	aim := 0
 	total := 0
 	h := 0

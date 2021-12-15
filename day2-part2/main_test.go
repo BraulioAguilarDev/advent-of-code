@@ -17,6 +17,6 @@ func TestAimOk(t *testing.T) {
 		"forward 2",
 	}
 
-	result := aim(rows)
+	result := Dive(rows)
 	assert.Equal(t, 900, result)
 }
